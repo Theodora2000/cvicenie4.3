@@ -2,30 +2,30 @@ package sk.stuba.uim.fei.oop;
 
 import jdk.swing.interop.SwingInterOpUtils;
 
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+
 public class Main {
-    public static void main(String[] args){
-        Map dictionary[];
-        dictionary= new Map[100];
+    public static void main(String[] args) {
+        HashMap<String, String> recnik= new HashMap<String,String>();
 
-        for(int i=0;i<3;i++){
-            dictionary[i] = new Map(ZKlavesnice.readString("Enter word"), ZKlavesnice.readString("Enter translate"));
-        }
-        String new_word = ZKlavesnice.readString("Enter word");
-        for(int i=0;i< dictionary.length;i++){
+        recnik.put("pas", "dog");
+        recnik.put("kuca","house");
 
-            if(new_word ==dictionary[i].word){
-                System.out.println("%s" + dictionary[i].translate);
-            }
+        if(!recnik.containsKey("pas"))
+        {
 
         }
 
-        /*
-        m.tran("Ano");
-        m.tran("Nie");
-        m.tran("Objektovo orientovan´e programovanie");*/
+        for(String key : recnik.keySet())
+        {
 
+            recnik.get(key);
+        }
+        HashMap<String,String> recnik2;
 
-
+        recnik2=new HashMap<String,String>(recnik);
+        recnik.equals(recnik2);
     }
-
 }

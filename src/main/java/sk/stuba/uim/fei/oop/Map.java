@@ -10,6 +10,10 @@ public class Map {
         this.translate = translate;
     }
 
+    public boolean equals(Map that) {
+        return this.word == that.word;
+    }
+
     public String getWord() {
         return word;
     }
@@ -22,22 +26,15 @@ public class Map {
         return translate;
     }
 
-    public void setTranslate() {
+    public void setTranslate(String translate) {
         this.translate = translate;
     }
 
-
-/*
-    public void tran(String word){
-        if (word =="Ano") {
-            System.out.println("Yes");
-        }
-        else if(word == "Nie"){
-            System.out.println("No");
-        }else{
-            System.out.println("Objected oriented programming");
-
-    }*/
+    @Override
+    public String toString() {
+        return "word='" + word + '\'' +
+                " translate='" + translate + '\'';
+    }
 }
 
 
